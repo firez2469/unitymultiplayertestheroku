@@ -7,7 +7,7 @@ import os
 import sys
 from subprocess import Popen
 
-
+print('started')
 def messagingInterpretation(msg1):
     return msg1
 

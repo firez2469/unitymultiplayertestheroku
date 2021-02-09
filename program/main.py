@@ -13,12 +13,14 @@ def messagingInterpretation(msg1):
 
 
 def sending_and_recieving():
+    print("starting connection at:",socket.gethostbyname(socket.gethostname()))
     s = socket.socket()
     socket.setdefaulttimeout(None)
     print('socket created ')
     port = 60000
     try:
-        s.bind(('127.0.0.1',port))
+        ip = socket.gethostbyname(socket.gethostname())
+        s.bind((ip,port))
         s.listen(30)
         print('socket listening...')
     except:
